@@ -2,7 +2,7 @@ import { useState, useRef, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './App.css';
 import api from './api';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const CODE_LENGTH = 6;
 

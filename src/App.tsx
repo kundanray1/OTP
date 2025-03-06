@@ -31,12 +31,15 @@ const App: React.FC = () => {
     e.preventDefault();
     const pastedData = e.clipboardData.getData('Text').trim();
     if (/^\d{6}$/.test(pastedData)) {
+      console.log(pastedData.split(''),'inputs')
+
       setInputs(pastedData.split(''));
       setError('');
       inputRefs.current[5]?.focus();
     }
   };
 
+  console.log(inputs,'inputs')
   // Handle form submission
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
